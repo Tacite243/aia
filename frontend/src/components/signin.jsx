@@ -1,27 +1,19 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { TextField, Button, Container, Typography, Box } from '@mui/material';
 
-export default function SignInForm() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+function SignInForm({ toggleForm }) {
+  const navigate = useNavigate();
 
   const handleSignIn = (event) => {
     event.preventDefault();
     // Logique de connexion ici
+    navigate('/home');
   };
 
   return (
-    <Container maxWidth="xs">
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          bgcolor: 'white',
-          padding: 4,
-          borderRadius: 2,
-          boxShadow: 3,
-        }}
-      >
+    <Container maxWidth="xs" className="form-container">
+      <Box className="form-box">
         <Typography variant="h5" component="h1" gutterBottom>
           Connexion
         </Typography>
@@ -33,8 +25,7 @@ export default function SignInForm() {
             required
             margin="normal"
             variant="outlined"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            className="form-field"
           />
           <TextField
             label="Mot de passe"
@@ -43,20 +34,24 @@ export default function SignInForm() {
             required
             margin="normal"
             variant="outlined"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            className="form-field"
           />
           <Button
             type="submit"
             fullWidth
             variant="contained"
             color="primary"
-            sx={{ mt: 2 }}
+            className="form-button"
           >
             Se connecter
           </Button>
         </form>
+        <Button onClick={toggleForm} fullWidth className="toggle-button">
+          Créer un compte
+        </Button>
       </Box>
     </Container>
   );
 }
+
+export default SignInForm;
