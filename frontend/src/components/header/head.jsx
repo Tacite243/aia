@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './header.css'
+import logo from '../../assets/aia_logo.png'
 
 function Header() {
   return (
     <div className="header">
       <div className="logo">
-        <img src="frontend\src\assets\AIA event.App..jpg" alt="Logo" height="40" />
+        <img src={logo} alt="Logo" height="70" />
       </div>
       <div className="nav">
         <ul>
