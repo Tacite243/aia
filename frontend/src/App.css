@@ -16,3 +16,54 @@ body {
     /* Perspective for the 3D effect */
 }
 
+.homePageContainer{
+    padding: 50px;
+}
+
+/* sider bar */
+
+.sider ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* dashboard */
+
+.body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    margin: 0 50px;
+    /* background-color: black; */
+}
+
+.sider {
+    border-right: #333 solid 1px;
+    height: 90vh;
+    padding: 10% 50px 50px 0;
+}
+
+.sider ul li {
+    border-bottom: #333 solid 1px;
+    font-size: 1.2rem;
+    height: 2.5rem;
+}
+
+.main {
+   margin: 0 0 0 50px;
+   color: #333;
+}
+
+.intervenants-liste {
+    background-color: aqua;
+}
+
+.card, .main-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+
+.video {
+    background-color: #333;
+}

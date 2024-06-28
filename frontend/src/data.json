@@ -1,0 +1,25 @@
+{
+    "intervenants" : {
+        "intervenant1" : {
+            "name" : "Joseph BOREL",
+            "tel" : "0493870847108",
+            "mail" : "dshjvfbhjbf@dhhc",
+            "photo" : "url",
+            "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quibusdam illum neque aut. Esse eligendi veniam laborum quidem tenetur adipisci a, quam autem reiciendis delectus. Excepturi, voluptates rem. A, temporibus."
+        },
+        "intervenant2" : {
+            "name" : "Adeline Safi",
+            "tel" : "0493870847108",
+            "mail" : "dshjvfbhjbf@dhhc",
+            "photo" : "url",
+            "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quibusdam illum neque aut. Esse eligendi veniam laborum quidem tenetur adipisci a, quam autem reiciendis delectus. Excepturi, voluptates rem. A, temporibus."
+        },
+        "intervenant3" : {
+            "name" : "Jean Marie",
+            "tel" : "0493870847108",
+            "mail" : "dshjvfbhjbf@dhhc",
+            "photo" : "url",
+            "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quibusdam illum neque aut. Esse eligendi veniam laborum quidem tenetur adipisci a, quam autem reiciendis delectus. Excepturi, voluptates rem. A, temporibus."
+        }
+    }
+}
