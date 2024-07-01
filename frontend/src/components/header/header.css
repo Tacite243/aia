@@ -4,13 +4,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 50px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    height: 12vh;
 }
 
 .logo img {
     vertical-align: middle;
+    margin-left: 50px;
 }
 
 .nav ul {
@@ -18,6 +21,7 @@
     margin: 0;
     padding: 0;
     color: #333;
+    margin-right: 65px;
 }
 
 .nav li {

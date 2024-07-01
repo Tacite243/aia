@@ -30,7 +30,7 @@ body {
     /* background-color: #333; */
 }
 
-.home-title {
+.home-title, .questions-title {
     font-size: 1.4rem;
     color: rgba(0, 89, 255, 0.743);
 }
@@ -63,13 +63,13 @@ body {
 .body {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    margin: 0 50px;
+    padding: 12vh 50px 0 50px;
     /* background-color: black; */
 }
 
 .sider {
     border-right: #333 solid 1px;
-    height: 90vh;
+    min-height: 75vh;
     padding: 10% 50px 50px 0;
 }
 

@@ -2,8 +2,9 @@
 import Card from "./card";
 import data from '../data.json';
 
+
 export default function Intervenant() {
-    const intervenantsArray = Object.values(data.intervenants)
+    const intervenantsArray = Object.values(data.eventInfo.intervenants)
     return (
         <div className="intervenants">
             <div className="intervenants-liste">

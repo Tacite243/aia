@@ -1,28 +1,47 @@
 {
-    "intervenants" : {
-        "intervenant1" : {
-            "name" : "Joseph BOREL",
-            "tel" : "0493870847108",
-            "mail" : "dshjvfbhjbf@dhhc",
-            "photo" : "./data/homme-d-affaires-élégant-29460877.jpg",
-            "role" : "hote",
-            "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quibusdam illum neque aut."
+    "eventInfo": {
+        "title": "EXPO VENTE 2024",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repellendus aut laudantium maxime. Omnis temporibus nesciunt repellendus eos officia, magnam esse facere, tenetur non quidem neque aliquid, dolores deserunt et.",
+        "place": "567",
+        "intervenants": {
+            "intervenant1": {
+                "name": "Joseph BOREL",
+                "tel": "0493870847108",
+                "mail": "dshjvfbhjbf@dhhc",
+                "photo": "./data/homme-d-affaires-élégant-29460877.jpg",
+                "role": "hote",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quibusdam illum neque aut."
+            },
+            "intervenant2": {
+                "name": "Adeline Safi",
+                "tel": "0493870847108",
+                "mail": "dshjvfbhjbf@dhhc",
+                "photo": "./data/homme-d-affaires-élégant-29460877.jpg",
+                "role": "orateur",
+                "description": "Lorem quam autem reiciendis delectus. Excepturi, voluptates rem. A, temporibus."
+            },
+            "intervenant3": {
+                "name": "Jean Marie",
+                "tel": "0493870847108",
+                "mail": "dshjvfbhjbf@dhhc",
+                "photo": "./data/homme-d-affaires-élégant-29460877.jpg",
+                "role": "invité",
+                "description": "Esse eligendi veniam laborum quidem tenetur adipisci a, quam autem reiciendis delectus. Excepturi."
+            }
         },
-        "intervenant2" : {
-            "name" : "Adeline Safi",
-            "tel" : "0493870847108",
-            "mail" : "dshjvfbhjbf@dhhc",
-            "photo" : "./data/homme-d-affaires-élégant-29460877.jpg",
-            "role" : "orateur",
-            "description" : "Lorem quam autem reiciendis delectus. Excepturi, voluptates rem. A, temporibus."
-        },
-        "intervenant3" : {
-            "name" : "Jean Marie",
-            "tel" : "0493870847108",
-            "mail" : "dshjvfbhjbf@dhhc",
-            "photo" : "./data/homme-d-affaires-élégant-29460877.jpg",
-            "role" : "invité",
-            "description" : "Esse eligendi veniam laborum quidem tenetur adipisci a, quam autem reiciendis delectus. Excepturi."
+        "questions": {
+            "1": {
+                "question": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nostrum velit deleniti tenetur accusantium inventore",
+                "author": "rerum hic illum iure doloremque, enim error adipisci veritatis veniam molestias iste eos explicabo nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nostrum velit deleniti tenetur accusantium inventore"
+            },
+            "2": {
+                "question": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nostrum velit deleniti tenetur accusantium inventore",
+                "author": "rerum hic illum iure doloremque, enim error adipisci veritatis veniam molestias iste eos explicabo nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nostrum velit deleniti tenetur accusantium inventore"
+            },
+            "3": {
+                "question": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nostrum velit deleniti tenetur accusantium inventore",
+                "author": "rerum hic illum iure doloremque, enim error adipisci veritatis veniam molestias iste eos explicabo nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nostrum velit deleniti tenetur accusantium inventore"
+            }
         }
     }
 }
