@@ -1,11 +1,16 @@
+import { Button } from '@mui/material';
 
 
-export default function Boutton({ text }) {
+
+export default function Boutton({ text, type }) {
     return (
-        <button
-            type="button"
+        <Button
+            type={type}
+            variant="contained"
+            color="primary"
+            className="form-button"
         >
             {text}
-        </button>
+        </Button>
     )
 }

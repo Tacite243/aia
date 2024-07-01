@@ -10,12 +10,14 @@ export default function HomePage() {
             <Header />
             <div className='homePageContainer'>
                 <form>
-                    <h4>Rejoindre un événement</h4>
-                    <input type="text" placeholder='entrer le code ici' />
-                    <Boutton text={"Réjoindre"} />
+                    <h4 className='home-title'>Rejoindre un événement</h4>
+                    <dev className="join-form">
+                        <input type="text" placeholder='entrer le code ici' />
+                        <Boutton text={"Réjoindre"} type='submit' />
+                    </dev>
                 </form>
-                <h4>Ou créer un événement </h4>
-                <Boutton text={"Créer un événement"} />
+                <h4 className='home-title'>Ou créer un événement </h4>
+                <Boutton text={"Créer un événement"} type='submit' />
             </div>
         </div>
     );

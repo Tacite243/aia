@@ -1,7 +1,11 @@
+import Header from "../components/header/head";
 
 
-export default function HelpPage(){
-    return(
-        <h1>Aide</h1>
+export default function HelpPage() {
+    return (
+        <div className="help-page">
+            <Header />
+            <h1>aide </h1>
+        </div>
     )
 }

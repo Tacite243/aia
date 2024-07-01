@@ -1,6 +1,6 @@
 
 
-export default function Card({ source, description, name }) {
+export default function Card({ source, description, name, role }) {
     return (
         <div className="card">
             <div className="card-image">
@@ -8,6 +8,7 @@ export default function Card({ source, description, name }) {
             </div>
             <div className="card-description">
                 <p>{description}</p>
+                <p className="role">{role}</p>
             </div>
         </div>
     )
