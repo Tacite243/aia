@@ -11,7 +11,7 @@ export default function VideoPage() {
             <div className="body">
                 <Sider />
                 <div className="main">
-                    <div style={{ minWidth: '100%', minHeight: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                    <div style={{ minWidth: '90%', minHeight: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         <Video />
                     </div>
                 </div>

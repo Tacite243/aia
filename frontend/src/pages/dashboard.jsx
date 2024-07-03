@@ -19,7 +19,7 @@ export default function Dashboard() {
                     </div>
                     <div className="main-grid">
                         <Intervenant />
-                        {/* <Video /> */}
+                        <Video />
                     </div>
                 </div>
             </div>
