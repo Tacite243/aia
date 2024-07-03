@@ -5,7 +5,11 @@ import Sider from '../components/sideBar/sider';
 
 const FileUpload = () => {
     const onDrop = useCallback(acceptedFiles => {
+        // Do something with the files
         console.log(acceptedFiles);
+
+        // Example: Upload files to backend
+        uploadFiles(acceptedFiles);
     }, []);
 
     const {
@@ -69,6 +73,30 @@ const FileUpload = () => {
         };
     }
 
+    const uploadFiles = async (files) => {
+        const formData = new FormData();
+        files.forEach(file => {
+            formData.append('files', file);
+        });
+
+        try {
+            const response = await fetch('http://backend-url/upload', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                console.log('Files uploaded successfully!');
+                // Handle success, e.g., show a success message
+            } else {
+                console.error('Failed to upload files.');
+                // Handle error, e.g., show an error message
+            }
+        } catch (error) {
+            console.error('Error uploading files:', error);
+            // Handle network or other errors
+        }
+    };
 
     return (
         <>
