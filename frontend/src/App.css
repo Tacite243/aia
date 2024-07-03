@@ -178,9 +178,7 @@ body {
     width: 100%;
 }
 
-.video {
-    background-color: #333;
-}
+
 
 .about-page {
     width: 100vh;
@@ -214,4 +212,37 @@ body {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* upload */
+
+.dropzone {
+    border: 2px dashed #cccccc;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+.dropzone p {
+    font-size: 16px;
+}
+
+.dropzone.active {
+    border-color: #4CAF50;
+}
+
+.dropzone.accept {
+    border-color: #00e676;
+}
+
+.dropzone.reject {
+    border-color: #ff1744;
+}
+
+.dropzone input {
+    display: none;
 }

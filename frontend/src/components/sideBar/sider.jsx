@@ -1,38 +1,22 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import './Sider.css'; // Assurez-vous d'ajouter du CSS pour styliser la sidebar
-
+import { Link, useLocation } from 'react-router-dom';
+import routes from '../../routes/routesConfig';
 
 export default function Sider() {
+  const location = useLocation;
+  
   return (
     <div className="sider">
-      <ul className="sider-liste">
-        <li>
-          <NavLink to="/dashboard" activeClassName="active-link">
-            Dashboard
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/video" activeClassName="active-link">
-            Vidéo
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/questions" activeClassName="active-link">
-            Questions
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/supports" activeClassName="active-link">
-            Supports
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/intervenant" activeClassName="active-link">
-            Intervenant
-          </NavLink>
-        </li>
-      </ul>
+      <div className="sider">
+        <ul className="sider-liste">
+          {routes.map((route, index) => (
+            <li key={index} className={location.pathname === route.path ? 'active' : ''}>
+              <Link to={route.path}>{route.name}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

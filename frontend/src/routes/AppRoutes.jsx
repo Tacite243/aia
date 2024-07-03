@@ -8,6 +8,7 @@ import Dashboard from '../pages/dashboard';
 import VideoPage from '../pages/videoPage';
 import QuestionSpace from '../pages/questionsPage';
 import CreateEventForm from '../components/createEvent';
+import FileUpload from '../pages/upload';
 
 
 function AppRoutes() {
@@ -20,7 +21,7 @@ function AppRoutes() {
       <Route path='/dashboard' element={<Dashboard />} />
       <Route path='/video' element={<VideoPage />} />
       <Route path='/questions' element={<QuestionSpace />} />
-      <Route path='/default' element={<CreateEventForm />} />
+      <Route path='/ressources' element={<FileUpload />} />
     </Routes>
   );
 }
