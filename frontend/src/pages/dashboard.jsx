@@ -14,6 +14,7 @@ export default function Dashboard() {
                 <Sider />
                 <div className="main">
                     <h4 className="title">{eventData.title}</h4>
+                    <p>Place disponible : {eventData.place}</p>
                     <div className="description">
                         <p>{eventData.description}</p>
                     </div>
