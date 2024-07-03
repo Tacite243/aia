@@ -1,0 +1,25 @@
+/* Sider.css */
+.sider {
+    width: 200px;
+    /* Fond de la sidebar */
+    padding: 10px;
+}
+
+.sider-liste {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sider-liste li {
+    margin: 10px 0;
+}
+
+.sider-liste li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.sider-liste li a.active-link {
+    font-weight: bold;
+    color: #007bff;
+}

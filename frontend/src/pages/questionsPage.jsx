@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from '../components/header/head';
-import Sider from '../components/sider';
+import Sider from '../components/sideBar/sider';
 import data from '../data.json'
 import QuestionItem from '../components/question';
 

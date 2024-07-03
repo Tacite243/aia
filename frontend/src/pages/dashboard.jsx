@@ -1,6 +1,6 @@
 import Header from "../components/header/head";
 import Intervenant from "../components/intervenants";
-import Sider from "../components/sider";
+import Sider from "../components/sideBar/sider";
 import Video from "../components/video";
 import data from "../data.json"
 

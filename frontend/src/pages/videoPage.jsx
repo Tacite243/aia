@@ -1,5 +1,5 @@
 import Header from "../components/header/head";
-import Sider from "../components/sider";
+import Sider from "../components/sideBar/sider";
 import Video from "../components/video";
 
 

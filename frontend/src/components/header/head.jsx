@@ -10,8 +10,10 @@ function Header() {
       </div>
       <div className="nav">
         <ul>
+          <li><Link to="/home">Acceuil</Link></li>
           <li><Link to="/about">À Propos</Link></li>
           <li><Link to="/help">Aide</Link></li>
+          <li><Link to="/">Déconnexion</Link></li>
         </ul>
       </div>
     </div>
