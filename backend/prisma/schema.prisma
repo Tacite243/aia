@@ -25,13 +25,14 @@ model User {
 
 model Event {
   id          String      @id @default(cuid())
-  titre       String?
-  date        DateTime?
-  lieu        String?
-  nombrePlace Int?
-  idUser      String      @map("idUser")
-  creator     User        @relation(fields: [idUser], references: [id])
-  Questions   Questions[]
+  title     String
+  location  String
+  date      DateTime
+  time      DateTime
+  seats     Int
+  userId    String
+  user      User?    @relation(fields: [userId], references: [id])
+  questions Questions[]
 }
 
 model Questions {
