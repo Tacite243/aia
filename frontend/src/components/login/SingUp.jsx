@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { TextField, Button, Container, Typography, Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 import './login.css';
 
 function SignUpForm({ toggleForm }) {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [name, setName] = useState('');
     const navigate = useNavigate();
 
-    const handleSignUp = (event) => {
-        event.preventDefault();
-        // Logique de connexion ici
-        navigate('/home');
+    const handleSignUp = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post('http://localhost:5000/auth/signup', { email, password, name }, {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            console.log('User signed up:', response.data);
+            navigate('/home');
+        } catch (error) {
+            console.error('Error signing up:', error);
+        }
     };
 
     return (
@@ -23,6 +36,8 @@ function SignUpForm({ toggleForm }) {
                     <TextField
                         label="Nom"
                         fullWidth
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         required
                         margin="normal"
                         variant="outlined"
@@ -32,6 +47,8 @@ function SignUpForm({ toggleForm }) {
                         label="Email"
                         type="email"
                         fullWidth
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         required
                         margin="normal"
                         variant="outlined"
@@ -41,6 +58,8 @@ function SignUpForm({ toggleForm }) {
                         label="Mot de passe"
                         type="password"
                         fullWidth
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                         required
                         margin="normal"
                         variant="outlined"

@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TextField, Button, Container, Typography, Box } from '@mui/material';
-
+import axios from 'axios';
 import './login.css';
 
-
 function SignInForm({ toggleForm }) {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleSignIn = (event) => {
-    event.preventDefault();
-    // Logique de connexion ici
-    navigate('/home');
+  const handleSignIn = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:5000/auth/login', { email, password }, {
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+      localStorage.setItem('token', response.data.token);
+      console.log('logged');
+      navigate('/home'); // Redirection après succès
+    } catch (error) {
+      console.error('Error signing in:', error);
+    }
   };
 
   return (
@@ -25,6 +36,8 @@ function SignInForm({ toggleForm }) {
             label="Email"
             type="email"
             fullWidth
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
             margin="normal"
             variant="outlined"
@@ -34,6 +47,8 @@ function SignInForm({ toggleForm }) {
             label="Mot de passe"
             type="password"
             fullWidth
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             required
             margin="normal"
             variant="outlined"
