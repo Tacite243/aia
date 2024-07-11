@@ -10,14 +10,16 @@ exports.createEvent = async (req, res) => {
             data: {
                 title,
                 location,
-                date: new Date(`${date}T${time}:00.000Z`),
+                date: new Date(date),
+                time,
                 seats: parseInt(seats),
-                userId: userId,
+                userId,
             },
         });
         res.status(201).json(event);
     } catch (error) {
+        console.log(userId);
         console.error('Error creating event:', error);
-        res.status(500).json({ details: error.message });
+        res.status(500).json({ error: 'Error creating event' });
     }
 };

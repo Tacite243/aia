@@ -28,10 +28,10 @@ model Event {
   title     String
   location  String
   date      DateTime
-  time      DateTime
+  time      String
   seats     Int
-  userId    String
-  user      User?    @relation(fields: [userId], references: [id])
+  userId    String @map("userId")
+  user      User    @relation(fields: [userId], references: [id])
   questions Questions[]
 }
 
