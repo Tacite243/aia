@@ -20,7 +20,6 @@ model User {
   name      String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  Event     Event[]
 }
 
 model Event {
@@ -30,8 +29,6 @@ model Event {
   date      DateTime
   time      String
   seats     Int
-  userId    String @map("userId")
-  user      User    @relation(fields: [userId], references: [id])
   questions Questions[]
 }
 
