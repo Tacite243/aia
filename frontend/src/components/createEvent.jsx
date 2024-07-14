@@ -25,7 +25,7 @@ export default function CreateEvent({ isOpen, onClose }) {
         console.log('Creating event with data:', newEvent); // Log des valeurs avant l'envoi
         const token = localStorage.getItem('token');
 
-        axios.post('https://aia-backend-7qd3.onrender.com/api/events/create', newEvent, {
+        axios.post('http://localhost:5000/api/events/create', newEvent, {
             headers: {
                 Authorization: `Bearer ${token}`
             }

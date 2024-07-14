@@ -25,7 +25,8 @@ function AppRoutes() {
       <Route path="/home" element={token ? <HomePage /> : <Navigate to="/" />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/help" element={<HelpPage />} />
-      <Route path='/dashboard' element={<Dashboard />} />
+      {/* <Route path='/dashboard' element={<Dashboard />} /> */}
+      <Route path="/dashboard/:eventId" element={<Dashboard />} />
       <Route path='/video' element={<VideoPage />} />
       <Route path='/questions' element={<QuestionSpace />} />
       <Route path='/default' element={<CreateEventForm />} />

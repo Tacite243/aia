@@ -20,3 +20,20 @@ exports.createEvent = async (req, res) => {
         res.status(500).json({ error: 'Error creating event' });
     }
 };
+
+exports.getEventById = async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        const event = await prisma.event.findUnique({
+            where: {id: id },
+        });
+        if (!event) {
+            return res.status(404).json({message: 'Event not found'});
+        }
+
+        res.status(200).json(event);
+    } catch (error) {
+        res.status(500).json({message: 'Server error'});
+    }
+}

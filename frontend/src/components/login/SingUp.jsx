@@ -14,7 +14,7 @@ function SignUpForm({ toggleForm }) {
     const handleSignUp = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('https://aia-backend-7qd3.onrender.com/auth/signup', { email, password, name }, {
+            const response = await axios.post('http://localhost:5000/auth/signup', { email, password, name }, {
                 headers: {
                     'Content-Type': 'application/json',
                 }

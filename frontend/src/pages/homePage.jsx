@@ -10,19 +10,17 @@ export default function HomePage() {
     const navigate = useNavigate();
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [eventId, setEventId] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleNavigateToDashboard = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.get(`https://aia-backend-7qd3.onrender.com/events/${eventId}`);
-            if (response.status === 200 && response.data.exists) {
+            const response = await axios.get(`http://localhost:5000/api/events/${eventId}`);
+            if (response.status === 200){
                 navigate(`/dashboard/${eventId}`);
-            } else {
-                alert("L'événement avec cet identifiant n'existe pas.");
             }
-        } catch (error) {
-            console.error("Erreur lors de la vérification de l'identifiant de l'événement", error);
-            alert("Une erreur s'est produite lors de la vérification de l'événement.");
+        } catch (error){
+            setErrorMessage('Event not found. Please check the code and try again.')
         }
     };
 
@@ -49,6 +47,7 @@ export default function HomePage() {
                         value={eventId}
                         onChange={(e) => setEventId(e.target.value)}
                     />
+                    {errorMessage && <p className="error-message">{errorMessage}</p>}
                     <Boutton text={"Réjoindre"} type={'submit'} />
                 </form>
                 <div className='createEvent'>
