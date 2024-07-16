@@ -16,10 +16,10 @@ export default function HomePage() {
         event.preventDefault();
         try {
             const response = await axios.get(`http://localhost:5000/api/events/${eventId}`);
-            if (response.status === 200){
+            if (response.status === 200) {
                 navigate(`/dashboard/${eventId}`);
             }
-        } catch (error){
+        } catch (error) {
             setErrorMessage('Event not found. Please check the code and try again.')
         }
     };
@@ -35,26 +35,30 @@ export default function HomePage() {
     return (
         <div className='homePage'>
             <Header />
-            <div className='homePageContainer'>
-                <form onSubmit={handleNavigateToDashboard}>
-                    <h4 className='home-title'>Rejoindre un événement</h4>
-                    <TextField
-                        label="code"
-                        type="text"
-                        required
-                        variant="outlined"
-                        className='input'
-                        value={eventId}
-                        onChange={(e) => setEventId(e.target.value)}
-                    />
-                    {errorMessage && <p className="error-message">{errorMessage}</p>}
-                    <Boutton text={"Réjoindre"} type={'submit'} />
-                </form>
-                <div className='createEvent'>
-                    <h4 className='home-title'>Ou créer un événement </h4>
-                    <Boutton text={"créer un événement"} click={openPopup} />
-                    <CreateEvent isOpen={isPopupOpen} onClose={closePopup} />
+            <div className="content">
+                <div className='homePageContainer'>
+                    <form onSubmit={handleNavigateToDashboard} className='join-event'>
+                        <h4 className='home-title'>Rejoindre un événement</h4>
+                        <input
+                            type="text"
+                            name=""
+                            className='input'
+                            value={eventId}
+                            onChange={(e) => setEventId(e.target.value)}
+                        /> <br />
+                        {errorMessage && <p className="error-message">{errorMessage}</p>}
+                        <Boutton text={"Réjoindre"} type={'submit'} />
+                    </form>
+                    <div className="medium" style={{ color: 'rgba(0, 89, 255, 0.743)' }}>Ou</div>
+                    <div className='createEvent'>
+                        <h4 className='home-title'>Créer un événement </h4>
+                        <Boutton text={"créer un événement"} click={openPopup} />
+                        <CreateEvent isOpen={isPopupOpen} onClose={closePopup} />
+                    </div>
                 </div>
+            </div>
+            <div className="description">
+                <p>AIA Conf App, designed by aia team</p>
             </div>
         </div>
     );
