@@ -10,9 +10,12 @@ export default function Login() {
     };
 
     return (
-        <div className="login">
-            <div className={`form-container ${isSignIn ? 'signin-active' : 'signup-active'}`}>
-                {isSignIn ? <SignInForm toggleForm={toggleForm} /> : <SignUpForm toggleForm={toggleForm} />}
+        <div className="login-page">
+            <div className="login">
+                <div className="overlay"></div>
+                <div className={`form-container ${isSignIn ? 'signin-active' : 'signup-active'}`}>
+                    {isSignIn ? <SignInForm toggleForm={toggleForm} /> : <SignUpForm toggleForm={toggleForm} />}
+                </div>
             </div>
         </div>
     );

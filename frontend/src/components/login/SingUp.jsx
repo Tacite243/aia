@@ -29,7 +29,7 @@ function SignUpForm({ toggleForm }) {
     return (
         <Container maxWidth="xs" className="form-container">
             <Box className="form-box">
-                <Typography variant="h5" component="h1" gutterBottom>
+                <Typography variant="h5" component="h1" gutterBottom style={{ fontWeight: 'bold' }}>
                     Création de compte
                 </Typography>
                 <form onSubmit={handleSignUp}>
@@ -41,6 +41,8 @@ function SignUpForm({ toggleForm }) {
                         required
                         margin="normal"
                         variant="outlined"
+                        InputLabelProps={{ style: { color: 'white' } }}
+              InputProps={{ style: { color: 'white' } }}
                         className="form-field"
                     />
                     <TextField
@@ -52,6 +54,8 @@ function SignUpForm({ toggleForm }) {
                         required
                         margin="normal"
                         variant="outlined"
+                        InputLabelProps={{ style: { color: 'white' } }}
+              InputProps={{ style: { color: 'white' } }}
                         className="form-field"
                     />
                     <TextField
@@ -63,6 +67,8 @@ function SignUpForm({ toggleForm }) {
                         required
                         margin="normal"
                         variant="outlined"
+                        InputLabelProps={{ style: { color: 'white' } }}
+              InputProps={{ style: { color: 'white' } }}
                         className="form-field"
                     />
                     <Button
@@ -75,7 +81,8 @@ function SignUpForm({ toggleForm }) {
                         Créer un compte
                     </Button>
                 </form>
-                <Button onClick={toggleForm} fullWidth className="toggle-button">
+                <span>Ou</span>
+                <Button onClick={toggleForm} fullWidth className="toggle-button" style={{color: '#fff'}}>
                     Se connecter
                 </Button>
             </Box>

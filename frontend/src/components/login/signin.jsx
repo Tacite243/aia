@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { TextField, Button, Container, Typography, Box } from '@mui/material';
+import { TextField, Button, Container, Typography, Box, colors } from '@mui/material';
 import axios from 'axios';
 import './login.css';
 
@@ -26,48 +26,56 @@ function SignInForm({ toggleForm }) {
   };
 
   return (
-    <Container maxWidth="xs" className="form-container">
-      <Box className="form-box">
-        <Typography variant="h5" component="h1" gutterBottom>
-          Connexion
-        </Typography>
-        <form onSubmit={handleSignIn}>
-          <TextField
-            label="Email"
-            type="email"
-            fullWidth
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            margin="normal"
-            variant="outlined"
-            className="form-field"
-          />
-          <TextField
-            label="Mot de passe"
-            type="password"
-            fullWidth
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-            margin="normal"
-            variant="outlined"
-            className="form-field"
-          />
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className="form-button"
-          >
-            Se connecter
+    <Container maxWidth="xs" className="form-container" >
+      <div className="content">
+        <Box className="form-box">
+          <Typography variant="h5" component="h1" gutterBottom style={{ fontWeight: 'bold', color: '#fff' }}>
+            Connexion
+          </Typography>
+          <form onSubmit={handleSignIn}>
+            <TextField
+              label="Email"
+              type="email"
+              fullWidth
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              margin="normal"
+              variant="outlined"
+              InputLabelProps={{ style: { color: 'white' } }}
+              InputProps={{ style: { color: 'white' } }}
+              className="form-field"
+            />
+            <TextField
+              label="Mot de passe"
+              type="password"
+              fullWidth
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              margin="normal"
+              variant="outlined"
+              InputLabelProps={{ style: { color: 'white' } }}
+              InputProps={{ style: { color: 'white' } }}
+              className="form-field"
+            />
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              style={{ color: 'white' }}
+              className="form-button"
+            >
+              Se connecter
+            </Button>
+          </form>
+          <span>Ou</span>
+          <Button onClick={toggleForm} fullWidth className="toggle-button" color='primary' style={{ color: 'white' }}>
+            Créer un compte
           </Button>
-        </form>
-        <Button onClick={toggleForm} fullWidth className="toggle-button">
-          Créer un compte
-        </Button>
-      </Box>
+        </Box>
+      </div>
     </Container>
   );
 }
