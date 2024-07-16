@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Header from '../components/header/head';
 import Boutton from '../components/bouton';
 import { useNavigate } from 'react-router-dom';
-import { Button, TextField } from '@mui/material';
 import CreateEvent from '../components/createEvent';
 import axios from 'axios';
 
@@ -46,7 +45,14 @@ export default function HomePage() {
                             value={eventId}
                             onChange={(e) => setEventId(e.target.value)}
                         /> <br />
-                        {errorMessage && <p className="error-message">{errorMessage}</p>}
+                        <div id="error">
+                            {errorMessage &&
+                                <p className="error-message">
+                                    <div className="errormessage" style={{color: 'red'}}>
+                                        {errorMessage}
+                                    </div>
+                                </p>}
+                        </div>
                         <Boutton text={"Réjoindre"} type={'submit'} />
                     </form>
                     <div className="medium" style={{ color: 'rgba(0, 89, 255, 0.743)' }}>Ou</div>
