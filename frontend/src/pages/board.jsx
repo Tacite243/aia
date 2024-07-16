@@ -9,7 +9,13 @@ export default function Board() {
     useEffect(() => {
         const fetchEvent = async () => {
             try {
-                const response = await axios.get(`/api/events/${eventId}`);
+                const token = localStorage.getItem('token'); // Récupérer le token depuis le localStorage
+                const response = await axios.get(`http://localhost:5000/api/events/${eventId}`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+                console.log(response.data); // Ajouter un console.log pour vérifier la réponse
                 setEvent(response.data);
             } catch (error) {
                 console.error('Error fetching event data:', error);
@@ -28,7 +34,6 @@ export default function Board() {
             <p>Date: {new Date(event.date).toLocaleDateString()}</p>
             <p>Time: {event.time}</p>
             <p>Seats: {event.seats}</p>
-            {/* Afficher d'autres informations sur l'événement */}
         </div>
     );
 }

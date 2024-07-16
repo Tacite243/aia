@@ -5,6 +5,9 @@ import { useNavigate } from 'react-router-dom';
 import CreateEvent from '../components/createEvent';
 import axios from 'axios';
 
+
+// clyiorml40000m2ahos9ah3fi
+
 export default function HomePage() {
     const navigate = useNavigate();
     const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -14,7 +17,12 @@ export default function HomePage() {
     const handleNavigateToDashboard = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.get(`http://localhost:5000/api/events/${eventId}`);
+            const token = localStorage.getItem('token');
+            const response = await axios.get(`http://localhost:5000/api/events/${eventId}`, {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
             if (response.status === 200) {
                 navigate(`/dashboard/${eventId}`);
             }
@@ -48,9 +56,9 @@ export default function HomePage() {
                         <div id="error">
                             {errorMessage &&
                                 <p className="error-message">
-                                    <div className="errormessage" style={{color: 'red'}}>
+                                    <span className="errormessage" style={{color: 'red'}}>
                                         {errorMessage}
-                                    </div>
+                                    </span>
                                 </p>}
                         </div>
                         <Boutton text={"Réjoindre"} type={'submit'} />

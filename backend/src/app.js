@@ -11,6 +11,6 @@ app.use(express.json());
 
 app.use('/auth', authRoutes);
 app.use('/api/events', authenticateToken, eventsRoutes);
-app.use('/api', eventsRoutes)
+app.use('/api', authenticateToken, eventsRoutes);
 
 module.exports = app;
