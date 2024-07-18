@@ -1,16 +1,15 @@
 import VideoPage from '../pages/videoPage';
 import QuestionSpace from '../pages/questionsPage';
-import SupportsPage from '../pages/SupportsPage';
 import IntervenantPage from '../pages/IntervenantPage';
 import FileUpload from '../pages/upload';
-import Dashboard from '../pages/dashboard';
+import Board from '../pages/board';
 
 const routes = [
-    { path: '/dashboard', component: Dashboard, name: 'Tableau de board' },
+    { path: '/dashboard/:eventId', component: Board, name: 'Tableau de board' },
     { path: '/video', component: VideoPage, name: 'Vidéo' },
     { path: '/questions', component: QuestionSpace, name: 'Questions' },
     { path: '/ressources', component: FileUpload, name: 'Ressources' },
-    { path: '/intervenant', component: IntervenantPage, name: 'Intervenants' }
+    { path: '/intervenants', component: IntervenantPage, name: 'Intervenants' },
 ];
 
 export default routes;

@@ -10,7 +10,6 @@ import QuestionSpace from '../pages/questionsPage';
 import CreateEventForm from '../components/createEvent';
 import Board from '../pages/board';
 import FileUpload from '../pages/upload';
-import Intervenant from '../components/intervenants';
 import IntervenantPage from '../pages/IntervenantPage';
 
 function AppRoutes() {
