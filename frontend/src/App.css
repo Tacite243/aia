@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*
 * {
     font-family: 'Poppins', sans-serif;
 }
@@ -15,12 +21,9 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    /* Light grey background */
     perspective: 1000px;
-    /* Perspective for the 3D effect */
 }
 
-/* nav bar  */
 
 .header {
     display: flex;
@@ -61,7 +64,6 @@ body {
 }
 
 
-/* home page */
 
 .homePage {
     margin: 0;
@@ -114,7 +116,6 @@ body {
     padding: 0;
 }
 
-/* sider bar */
 
 .sider ul {
     list-style-type: none;
@@ -122,13 +123,11 @@ body {
     padding: 0;
 }
 
-/* dashboard */
 
 .body {
     display: grid;
     grid-template-columns: 1fr 4fr;
     padding: 12vh 50px 0 50px;
-    /* background-color: black; */
 }
 
 .sider {
@@ -226,7 +225,6 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* upload */
 
 .dropzone {
     border: 2px dashed #cccccc;
@@ -265,4 +263,4 @@ body {
 
 .createEvent button {
     margin: 30px 0;
-}
+} */

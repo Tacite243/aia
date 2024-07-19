@@ -1,3 +1,5 @@
+
+/* 
 .form-container {
     position: relative;
     width: 300px;
@@ -6,13 +8,12 @@
     transform-style: preserve-3d;
 }
 
-.login-page {
+.login {
     background-image: url('../../assets/aia_logo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-    /* Ajuster selon la taille de votre section */
     width: 100%;
     position: relative;
 }
@@ -22,8 +23,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(51, 51, 51, 0.8); /* Couleur #333 avec 80% d'opacité */
-  }
+    background-color: rgba(51, 51, 51, 0.8);
+    height: 100vh;
+  } 
 
 .signin-active {
     transform: rotateY(0deg);
@@ -76,4 +78,4 @@
 
 .toggle-button:hover {
     color: #303f9f;
-}
+} */
