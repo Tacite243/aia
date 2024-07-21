@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-/*
 * {
     font-family: 'Poppins', sans-serif;
 }
@@ -13,6 +7,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #F9F9F9;
 }
 
 .login {
@@ -21,16 +16,19 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    /* Light grey background */
     perspective: 1000px;
+    /* Perspective for the 3D effect */
 }
 
+/* nav bar  */
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
     position: fixed;
     width: 100%;
     height: 12vh;
@@ -38,7 +36,9 @@ body {
 
 .logo img {
     vertical-align: middle;
-    margin-left: 50px;
+    margin: 0 50px;
+    width: 220px;
+    height: 190px;
 }
 
 .nav ul {
@@ -64,6 +64,7 @@ body {
 }
 
 
+/* home page */
 
 .homePage {
     margin: 0;
@@ -75,17 +76,24 @@ body {
     align-items: center;
     text-align: center;
     align-content: center;
-    padding: 15% 0;
+    padding: 15% 5%;
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
     margin: 0 20vw;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 25% 25%;
 }
 
 .description {
     align-items: center;
     text-align: center;
     align-content: center;
-};
+}
+
+
+.content{
+    background-color: #F9F9F9;
+}
 
 .main-intervenant {
     width: 50%;
@@ -116,6 +124,7 @@ body {
     padding: 0;
 }
 
+/* sider bar */
 
 .sider ul {
     list-style-type: none;
@@ -123,6 +132,15 @@ body {
     padding: 0;
 }
 
+/* dashboard */
+
+.dashboard .body .main {
+    margin-top: 5%;
+    padding: 15px 50px;
+    background-color: #fff;
+    border-radius: 100px 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 
 .body {
     display: grid;
@@ -133,7 +151,14 @@ body {
 .sider {
     border-right: #333 solid 1px;
     min-height: 75vh;
-    padding: 10% 50px 50px 0;
+    padding: 5% 50px 50px 0;
+    position: fixed;
+}
+
+.sider:hover {
+    border-radius: 0 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 0;
 }
 
 .sider ul li {
@@ -174,6 +199,24 @@ body {
     text-align: left;
     margin: 0;
     padding: 0;
+}
+
+.video-card {
+    min-width: 100%; 
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    align-items: center;
+    margin-top: 5%;
+    border-radius: 100px 15px  ;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-page {
+    height: 100vh;
+    width: 100vw;
+    background-color: #F9F9F9;
 }
 
 .role {
@@ -225,6 +268,7 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* upload */
 
 .dropzone {
     border: 2px dashed #cccccc;
@@ -263,4 +307,4 @@ body {
 
 .createEvent button {
     margin: 30px 0;
-} */
+}

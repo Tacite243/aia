@@ -1,5 +1,4 @@
 import Header from "../components/header/head";
-import Intervenant from "../components/intervenants";
 import Sider from "../components/sideBar/sider";
 import Video from "../components/video";
 import data from "../data.json"
@@ -19,8 +18,7 @@ export default function Dashboard() {
                         <p>{eventData.description}</p>
                     </div>
                     <div className="main-grid">
-                        <Intervenant />
-                        <Video />
+                        {/* <Intervenant /> */}
                     </div>
                 </div>
             </div>

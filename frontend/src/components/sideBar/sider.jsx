@@ -7,7 +7,7 @@ export default function Sider() {
   const location = useLocation;
   
   return (
-    <div className="sider">
+    <div className="siderbar">
       <div className="sider">
         <ul className="sider-liste">
           {routes.map((route, index) => (
